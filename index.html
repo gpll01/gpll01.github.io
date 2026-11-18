@@ -365,6 +365,45 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+  .hero {
+  padding: 85px 0 95px;
+  max-width: none;
+  display: grid;
+  grid-template-columns: 1.5fr 0.7fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 280px;
+  justify-self: end;
+}
+
+.hero-image img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 65px 0;
+  }
+
+  .hero-image {
+    max-width: 210px;
+    justify-self: start;
+  }
+}
 </style>
 </head>
 
@@ -381,19 +420,25 @@ footer {
 </nav>
 
 <header class="hero">
-  <div class="eyebrow">Digital Humanities · Marketing · Technology</div>
+  <div class="hero-content">
+    <div class="eyebrow">Digital Humanities · Marketing · Technology</div>
 
-  <h1>A collection of my<br>digital works.</h1>
+    <h1>A collection of my<br>digital works.</h1>
 
-  <p>
-    Hi, I'm Giusy. I am a Digital Humanities student interested
-    in the intersection of technology, digital communication and
-    creative thinking. This portfolio brings together selected
-    projects and experiences across technical development,
-    content creation and digital marketing.
-  </p>
+    <p>
+      Hi, I'm Giusy. I am a Digital Humanities student interested
+      in the intersection of technology, digital communication and
+      creative thinking. This portfolio brings together selected
+      projects and experiences across technical development,
+      content creation and digital marketing.
+    </p>
 
-  <a class="button" href="#projects">Explore my work ↗</a>
+    <a class="button" href="#projects">Explore my work ↗</a>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/profile.jpg" alt="Portrait of Giuseppina">
+  </div>
 </header>
 
 <!-- 01 / TECHNICAL PROJECTS -->
