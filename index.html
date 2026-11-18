@@ -244,6 +244,92 @@ footer {
   .section-heading { align-items: flex-start; }
   footer { flex-wrap: wrap; }
 }
+  .surf-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.surf-video {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: 8px;
+  text-decoration: none;
+  background: #e9e4dc;
+}
+
+.surf-video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.surf-video::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65),
+    transparent 55%
+  );
+}
+
+.surf-video:hover img {
+  transform: scale(1.05);
+}
+
+.play-icon {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #292929;
+  font-size: 14px;
+  padding-left: 3px;
+  transition: transform 0.3s ease;
+}
+
+.surf-video:hover .play-icon {
+  transform: translate(-50%, -50%) scale(1.12);
+}
+
+.video-title {
+  position: absolute;
+  z-index: 2;
+  bottom: 14px;
+  left: 14px;
+  right: 10px;
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .surf-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .surf-gallery {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 
@@ -378,23 +464,67 @@ footer {
     </div>
 
     <div class="content-panel">
-      <span class="project-category">Selected experience</span>
-      <h3>Surf Camp Content Creation</h3>
-      <p>
-        Photo and video production, Instagram Stories and
-        short-form video editing to document surf sessions,
-        activities and experiences during camp programmes.
-      </p>
-      <div class="tags">
-        <span class="tag">Instagram</span>
-        <span class="tag">CapCut</span>
-        <span class="tag">Photography</span>
-        <span class="tag">Video Editing</span>
-      </div>
-      <span class="text-link">Portfolio materials coming soon</span>
-    </div>
+  <span class="project-category">Selected experience</span>
+  <h3>Surf Camp Content Creation</h3>
+  <p>
+    Photo and video production, Instagram Stories and
+    short-form video editing to document surf sessions,
+    activities and experiences during camp programmes.
+  </p>
+
+  <div class="tags">
+    <span class="tag">Instagram</span>
+    <span class="tag">CapCut</span>
+    <span class="tag">Photography</span>
+    <span class="tag">Video Editing</span>
   </div>
-</section>
+</div>
+
+<div class="surf-gallery">
+
+  <a href="https://drive.google.com/file/d/1yjP5TFtfQnPXSEu0IsD1ysyjYRG_ls_2/view"
+     target="_blank" rel="noopener noreferrer" class="surf-video">
+    <img src="images/what-ill-remember.jpg" alt="What I'll Remember">
+    <span class="play-icon">▶</span>
+    <span class="video-title">What I'll Remember</span>
+  </a>
+
+  <a href="https://drive.google.com/file/d/1_t0VkeVthVy-oKOT2qFl4qA41Le0gSUN/view"
+     target="_blank" rel="noopener noreferrer" class="surf-video">
+    <img src="images/remember-what-avicii-said.jpg" alt="Remember What Avicii Said">
+    <span class="play-icon">▶</span>
+    <span class="video-title">Remember What Avicii Said</span>
+  </a>
+
+  <a href="https://drive.google.com/file/d/10-IodrT8H_GRhccSNB5nDQzSBTbG5jSm/view"
+     target="_blank" rel="noopener noreferrer" class="surf-video">
+    <img src="images/pov-surf-camp.jpg" alt="POV Surf Camp">
+    <span class="play-icon">▶</span>
+    <span class="video-title">POV: Surf Camp Experience</span>
+  </a>
+
+  <a href="https://drive.google.com/file/d/1EcUU_062H7BFkbgXt8GcwI0zznN1zSSq/view"
+     target="_blank" rel="noopener noreferrer" class="surf-video">
+    <img src="images/surf-camp-interviews.jpg" alt="Surf Camp Interviews">
+    <span class="play-icon">▶</span>
+    <span class="video-title">Surf Camp Interviews</span>
+  </a>
+
+  <a href="https://drive.google.com/file/d/18U2mBEI1gnNzBmFD7AD2iAYar6_nwx_Y/view"
+     target="_blank" rel="noopener noreferrer" class="surf-video">
+    <img src="images/aveiro-surf-camp-dump.jpg" alt="Aveiro Surf Camp Dump">
+    <span class="play-icon">▶</span>
+    <span class="video-title">Aveiro Surf Camp Dump</span>
+  </a>
+
+  <a href="https://drive.google.com/file/d/1LiFg2R2goNuEUHi-WO0fpzcdZIUu-bVx/view"
+     target="_blank" rel="noopener noreferrer" class="surf-video">
+    <img src="images/typical-day-surf-camp.jpg" alt="A Typical Day at the Surf Camp">
+    <span class="play-icon">▶</span>
+    <span class="video-title">A Typical Day at the Surf Camp</span>
+  </a>
+
+</div>
 
 <section id="marketing">
   <div class="section-heading">
