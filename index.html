@@ -21,9 +21,13 @@
   --card: #efeee8;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -33,7 +37,10 @@ body {
   line-height: 1.7;
 }
 
-a { color: inherit; text-decoration: none; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
 .container {
   width: min(1050px, 88%);
@@ -107,7 +114,9 @@ h1 {
   transition: .2s;
 }
 
-.button:hover { background: var(--accent); }
+.button:hover {
+  background: var(--accent);
+}
 
 section {
   padding: 72px 0;
@@ -122,7 +131,10 @@ section {
   margin-bottom: 32px;
 }
 
-h2 { font-size: 37px; margin: 0; }
+h2 {
+  font-size: 37px;
+  margin: 0;
+}
 
 .section-number {
   color: var(--accent);
@@ -153,7 +165,9 @@ h2 { font-size: 37px; margin: 0; }
   transition: transform .2s;
 }
 
-.project:hover { transform: translateY(-3px); }
+.project:hover {
+  transform: translateY(-3px);
+}
 
 .project-category {
   color: var(--accent);
@@ -218,35 +232,11 @@ h2 { font-size: 37px; margin: 0; }
   font-size: 13px;
 }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 25px 0;
-  color: var(--muted);
-  font-size: 11px;
-}
+/* Surf Camp video gallery */
 
-.social-links {
-  display: flex;
-  gap: 18px;
-}
-
-.social-links a {
-  font-weight: 600;
-}
-
-@media (max-width: 650px) {
-  .nav-links { gap: 11px; font-size: 10px; }
-  .hero { padding: 75px 0; }
-  .projects, .content-grid { grid-template-columns: 1fr; }
-  .section-heading { align-items: flex-start; }
-  footer { flex-wrap: wrap; }
-}
-  .surf-gallery {
+.surf-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   margin-top: 30px;
 }
@@ -318,10 +308,55 @@ footer {
   font-weight: 500;
 }
 
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 25px 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.social-links {
+  display: flex;
+  gap: 18px;
+}
+
+.social-links a {
+  font-weight: 600;
+}
+
+/* Responsive layout */
+
 @media (max-width: 700px) {
+  .nav-links {
+    gap: 11px;
+    font-size: 10px;
+  }
+
+  .hero {
+    padding: 75px 0;
+  }
+
+  .projects,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
   .surf-gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+  }
+
+  footer {
+    flex-wrap: wrap;
   }
 }
 
@@ -361,6 +396,8 @@ footer {
   <a class="button" href="#projects">Explore my work ↗</a>
 </header>
 
+<!-- 01 / TECHNICAL PROJECTS -->
+
 <section id="projects">
   <div class="section-heading">
     <h2>Technical Projects.</h2>
@@ -390,7 +427,7 @@ footer {
           <span class="tag">QGIS</span>
         </div>
       </div>
-      <a class="text-link" href="https://github.com/gpll01/coastal-cliff-prediction-ml" target="_blank">View on GitHub ↗</a>
+      <a class="text-link" href="https://github.com/gpll01/coastal-cliff-prediction-ml" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
     </article>
 
     <article class="project">
@@ -406,7 +443,7 @@ footer {
           <span class="tag">OOP</span>
         </div>
       </div>
-      <a class="text-link" href="https://github.com/gpll01/music-school-management-python" target="_blank">View on GitHub ↗</a>
+      <a class="text-link" href="https://github.com/gpll01/music-school-management-python" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
     </article>
 
     <article class="project">
@@ -422,7 +459,7 @@ footer {
           <span class="tag">C#</span>
         </div>
       </div>
-      <a class="text-link" href="https://github.com/gpll01/echoes-of-memory-unity" target="_blank">View on GitHub ↗</a>
+      <a class="text-link" href="https://github.com/gpll01/echoes-of-memory-unity" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
     </article>
 
     <article class="project">
@@ -439,11 +476,13 @@ footer {
           <span class="tag">SwiftUI</span>
         </div>
       </div>
-      <a class="text-link" href="https://github.com/gpll01/inlis-ios-app" target="_blank">View on GitHub ↗</a>
+      <a class="text-link" href="https://github.com/gpll01/inlis-ios-app" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
     </article>
 
   </div>
 </section>
+
+<!-- 02 / CONTENT CREATION -->
 
 <section id="content">
   <div class="section-heading">
@@ -452,6 +491,7 @@ footer {
   </div>
 
   <div class="content-grid">
+
     <div>
       <div class="eyebrow">Visual storytelling · Social media</div>
       <h3>Visual stories and digital content.</h3>
@@ -464,67 +504,71 @@ footer {
     </div>
 
     <div class="content-panel">
-  <span class="project-category">Selected experience</span>
-  <h3>Surf Camp Content Creation</h3>
-  <p>
-    Photo and video production, Instagram Stories and
-    short-form video editing to document surf sessions,
-    activities and experiences during camp programmes.
-  </p>
+      <span class="project-category">Selected experience</span>
+      <h3>Surf Camp Content Creation</h3>
+      <p>
+        Photo and video production, Instagram Stories and
+        short-form video editing to document surf sessions,
+        activities and experiences during camp programmes.
+      </p>
 
-  <div class="tags">
-    <span class="tag">Instagram</span>
-    <span class="tag">CapCut</span>
-    <span class="tag">Photography</span>
-    <span class="tag">Video Editing</span>
-    
-  <div class="surf-gallery">
+      <div class="tags">
+        <span class="tag">Instagram</span>
+        <span class="tag">CapCut</span>
+        <span class="tag">Photography</span>
+        <span class="tag">Video Editing</span>
+      </div>
 
-  <a href="https://drive.google.com/file/d/1yjP5TFtfQnPXSEu0IsD1ysyjYRG_ls_2/view"
-     target="_blank" rel="noopener noreferrer" class="surf-video">
-    <img src="images/what-ill-remember.jpg" alt="What I'll Remember">
-    <span class="play-icon">▶</span>
-    <span class="video-title">What I'll Remember</span>
-  </a>
+      <div class="surf-gallery">
 
-  <a href="https://drive.google.com/file/d/1_t0VkeVthVy-oKOT2qFl4qA41Le0gSUN/view"
-     target="_blank" rel="noopener noreferrer" class="surf-video">
-    <img src="images/remember-what-avicii-said.jpg" alt="Remember What Avicii Said">
-    <span class="play-icon">▶</span>
-    <span class="video-title">Remember What Avicii Said</span>
-  </a>
+        <a href="https://drive.google.com/file/d/1yjP5TFtfQnPXSEu0IsD1ysyjYRG_ls_2/view"
+           target="_blank" rel="noopener noreferrer" class="surf-video">
+          <img src="images/what-ill-remember.jpg" alt="What I'll Remember">
+          <span class="play-icon">▶</span>
+          <span class="video-title">What I'll Remember</span>
+        </a>
 
-  <a href="https://drive.google.com/file/d/10-IodrT8H_GRhccSNB5nDQzSBTbG5jSm/view"
-     target="_blank" rel="noopener noreferrer" class="surf-video">
-    <img src="images/pov-surf-camp.jpg" alt="POV Surf Camp">
-    <span class="play-icon">▶</span>
-    <span class="video-title">POV: Surf Camp Experience</span>
-  </a>
+        <a href="https://drive.google.com/file/d/1_t0VkeVthVy-oKOT2qFl4qA41Le0gSUN/view"
+           target="_blank" rel="noopener noreferrer" class="surf-video">
+          <img src="images/remember-what-avicii-said.jpg" alt="Remember What Avicii Said">
+          <span class="play-icon">▶</span>
+          <span class="video-title">Remember What Avicii Said</span>
+        </a>
 
-  <a href="https://drive.google.com/file/d/1EcUU_062H7BFkbgXt8GcwI0zznN1zSSq/view"
-     target="_blank" rel="noopener noreferrer" class="surf-video">
-    <img src="images/surf-camp-interviews.jpg" alt="Surf Camp Interviews">
-    <span class="play-icon">▶</span>
-    <span class="video-title">Surf Camp Interviews</span>
-  </a>
+        <a href="https://drive.google.com/file/d/10-IodrT8H_GRhccSNB5nDQzSBTbG5jSm/view"
+           target="_blank" rel="noopener noreferrer" class="surf-video">
+          <img src="images/pov-surf-camp.jpg" alt="POV Surf Camp">
+          <span class="play-icon">▶</span>
+          <span class="video-title">POV: Surf Camp Experience</span>
+        </a>
 
-  <a href="https://drive.google.com/file/d/18U2mBEI1gnNzBmFD7AD2iAYar6_nwx_Y/view"
-     target="_blank" rel="noopener noreferrer" class="surf-video">
-    <img src="images/aveiro-surf-camp-dump.jpg" alt="Aveiro Surf Camp Dump">
-    <span class="play-icon">▶</span>
-    <span class="video-title">Aveiro Surf Camp Dump</span>
-  </a>
+        <a href="https://drive.google.com/file/d/1EcUU_062H7BFkbgXt8GcwI0zznN1zSSq/view"
+           target="_blank" rel="noopener noreferrer" class="surf-video">
+          <img src="images/surf-camp-interviews.jpg" alt="Surf Camp Interviews">
+          <span class="play-icon">▶</span>
+          <span class="video-title">Surf Camp Interviews</span>
+        </a>
 
-  <a href="https://drive.google.com/file/d/1LiFg2R2goNuEUHi-WO0fpzcdZIUu-bVx/view"
-     target="_blank" rel="noopener noreferrer" class="surf-video">
-    <img src="images/typical-day-surf-camp.jpg" alt="A Typical Day at the Surf Camp">
-    <span class="play-icon">▶</span>
-    <span class="video-title">A Typical Day at the Surf Camp</span>
-  </a>
+        <a href="https://drive.google.com/file/d/18U2mBEI1gnNzBmFD7AD2iAYar6_nwx_Y/view"
+           target="_blank" rel="noopener noreferrer" class="surf-video">
+          <img src="images/aveiro-surf-camp-dump.jpg" alt="Aveiro Surf Camp Dump">
+          <span class="play-icon">▶</span>
+          <span class="video-title">Aveiro Surf Camp Dump</span>
+        </a>
 
-</div>
+        <a href="https://drive.google.com/file/d/1LiFg2R2goNuEUHi-WO0fpzcdZIUu-bVx/view"
+           target="_blank" rel="noopener noreferrer" class="surf-video">
+          <img src="images/typical-day-surf-camp.jpg" alt="A Typical Day at the Surf Camp">
+          <span class="play-icon">▶</span>
+          <span class="video-title">A Typical Day at the Surf Camp</span>
+        </a>
+
+      </div>
+    </div>
   </div>
-</div>
+</section>
+
+<!-- 03 / DIGITAL MARKETING & STRATEGY -->
 
 <section id="marketing">
   <div class="section-heading">
@@ -556,24 +600,33 @@ footer {
           <span class="tag">Google Search Console</span>
         </div>
       </div>
-      <a class="text-link" href="https://tripicotravel.com/" target="_blank">Visit website ↗</a>
+      <a class="text-link" href="https://tripicotravel.com/" target="_blank" rel="noopener noreferrer">Visit website ↗</a>
     </article>
 
     <article class="project">
       <div>
-        <span class="project-category">Academic Project · Content Strategy</span>
-        <h3>Content Strategy</h3>
+        <span class="project-category">Academic Project · Communication Strategy</span>
+        <h3>LM-43 Brand Identity & Communication Strategy</h3>
         <p>
-          A university project focused on content strategy,
-          exploring audience needs, communication objectives,
-          content planning and digital channels.
+          Collaborative project focused on building and strengthening
+          the identity of the Digital Humanities Master's degree.
+          The work included document analysis, student perception
+          research, competitor benchmarking and the development
+          of a social media communication plan, including an
+          Instagram prototype.
         </p>
         <div class="tags">
           <span class="tag">Content Strategy</span>
-          <span class="tag">Digital Communication</span>
+          <span class="tag">Brand Identity</span>
+          <span class="tag">Social Media</span>
+          <span class="tag">Research</span>
         </div>
       </div>
-      <span class="text-link">Project details coming soon</span>
+      <a class="text-link"
+         href="assets/content-strategy-lm43.pdf"
+         target="_blank" rel="noopener noreferrer">
+        View project presentation ↗
+      </a>
     </article>
 
   </div>
@@ -582,8 +635,8 @@ footer {
 <footer>
   <span>© 2026 Giuseppina Pellino</span>
   <div class="social-links">
-    <a href="https://www.linkedin.com/in/giuseppina-pellino-594859285/" target="_blank">LinkedIn ↗</a>
-    <a href="https://github.com/gpll01" target="_blank">GitHub ↗</a>
+    <a href="https://www.linkedin.com/in/giuseppina-pellino-594859285/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    <a href="https://github.com/gpll01" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
   </div>
 </footer>
 
